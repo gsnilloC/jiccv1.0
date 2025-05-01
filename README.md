@@ -1,6 +1,4 @@
-# 📸 Droov
-
-Droov is a clean, minimal Ruby on Rails application designed to showcase a photographer’s portfolio. It allows uploading and displaying high-quality images with titles and descriptions.
+# JICC
 
 ---
 
@@ -12,10 +10,3 @@ Droov is a clean, minimal Ruby on Rails application designed to showcase a photo
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ---
-
-## Features
-
-- Upload and display photos using **Active Storage**
-- Descriptive titles and captions
-- Responsive image gallery
-- Easy-to-extend admin interface
