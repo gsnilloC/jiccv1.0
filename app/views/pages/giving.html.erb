@@ -1,0 +1,169 @@
+<!-- Page Header -->
+<div class="bg-blue-900 text-white">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Give</h1>
+    <p class="mt-6 text-xl max-w-3xl">Support our ministry and make a difference in our community.</p>
+  </div>
+</div>
+
+<!-- Giving Options -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Donation Form -->
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Make a Donation</h2>
+      <form id="payment-form">
+        <div class="space-y-6">
+          <div>
+            <label for="amount" class="block text-sm font-medium text-gray-700">Donation Amount</label>
+            <div class="mt-1 grid grid-cols-4 gap-4">
+              <button type="button" class="amount-btn bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700">$25</button>
+              <button type="button" class="amount-btn bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">$50</button>
+              <button type="button" class="amount-btn bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">$100</button>
+              <button type="button" class="amount-btn bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">$250</button>
+            </div>
+            <div class="mt-4">
+              <input type="number" id="custom-amount" placeholder="Custom Amount" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="frequency" class="block text-sm font-medium text-gray-700">Frequency</label>
+            <select id="frequency" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+              <option value="one-time">One Time</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="fund" class="block text-sm font-medium text-gray-700">Fund</label>
+            <select id="fund" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+              <option value="general">General Fund</option>
+              <option value="missions">Missions</option>
+              <option value="building">Building Fund</option>
+              <option value="youth">Youth Ministry</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="card-element" class="block text-sm font-medium text-gray-700">Credit Card</label>
+            <div id="card-element" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3">
+              <!-- Stripe Card Element will be inserted here -->
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Impact Information -->
+    <div class="space-y-8">
+      <!-- How Your Donation Helps -->
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How Your Donation Helps</h2>
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-900">Supporting Our Ministries</h3>
+              <p class="mt-2 text-gray-600">Your donations help fund our various ministries, including youth programs, community outreach, and worship services.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-900">Building Maintenance</h3>
+              <p class="mt-2 text-gray-600">Contributions help maintain our church facilities and create a welcoming environment for worship and fellowship.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-lg font-semibold text-gray-900">Community Support</h3>
+              <p class="mt-2 text-gray-600">Your generosity enables us to support those in need through food drives, counseling services, and other community programs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Ways to Give -->
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Other Ways to Give</h2>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+            </svg>
+            <span class="ml-3 text-gray-600">Text "GIVE" to (555) 123-4567</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="ml-3 text-gray-600">Mail checks to: 123 Church Street, City, State 12345</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+            <span class="ml-3 text-gray-600">Set up automatic bank transfers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tax Information -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Tax Information</h2>
+    <p class="mt-4 text-xl text-gray-600">
+      All donations are tax-deductible. You will receive a receipt for your records.
+    </p>
+    <p class="mt-2 text-gray-600">
+      Tax ID: XX-XXXXXXX
+    </p>
+  </div>
+</section>
+
+<script>
+  // Add JavaScript for handling donation amount buttons
+  document.querySelectorAll('.amount-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      });
+      
+      // Add active class to clicked button
+      this.classList.remove('bg-gray-100', 'text-gray-700');
+      this.classList.add('bg-blue-600', 'text-white');
+      
+      // Update custom amount input
+      document.getElementById('custom-amount').value = this.textContent.replace('$', '');
+    });
+  });
+</script> 
