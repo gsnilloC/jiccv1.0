@@ -1,13 +1,12 @@
 <!-- Hero Section -->
-<section class="relative bg-red-500 text-white">
+<section class="relative text-white">
   <div class="absolute inset-0">
-    <img class="w-full h-full object-cover opacity-20" src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Church interior">
+    <%= image_tag "cross.jpg", class: "w-full h-full object-cover opacity-20", alt: "Church interior" %>
   </div>
   <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Joy International Church Center</h1>
-    <p class="mt-6 text-xl max-w-3xl">Discover and Maximize our potential through the word of God.</p>
+    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-orange-500"style="color: orange;">Discover and Maximize your potential through the word of God.</h1>
     <div class="mt-10">
-      <%= link_to "Join Us This Sunday", "#services", class: "inline-block bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100" %>
+      <%= link_to "Learn More About Us", "about", class: "inline-block bg-red-600 text-white px-8 py-3 rounded-md font-medium hover:bg-red-700" %>
     </div>
   </div>
 </section>
@@ -22,23 +21,21 @@
       <!-- Sunday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
         <h3 class="text-xl font-semibold text-gray-900">Sunday Morning</h3>
-        <p class="mt-2 text-gray-600">9:00 AM - Traditional Service</p>
-        <p class="mt-1 text-gray-600">11:00 AM - Contemporary Service</p>
+        <p class="mt-2 text-gray-600">10:30 AM - Sunday Service</p>
       </div>
 
       <!-- Wednesday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
         <h3 class="text-xl font-semibold text-gray-900">Wednesday Evening</h3>
-        <p class="mt-2 text-gray-600">7:00 PM - Bible Study</p>
-        <p class="mt-1 text-gray-600">Youth Group Meeting</p>
+        <p class="mt-2 text-gray-600">6:00 PM - Prayer Night</p>
       </div>
 
-      <!-- Location -->
+      <!-- Friday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
-        <h3 class="text-xl font-semibold text-gray-900">Location</h3>
-        <p class="mt-2 text-gray-600"> <%= link_to "17902 Murphy Pkwy", "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", target: "_blank", class: "hover:text-blue-200" %></p>
-          <p class="mt-1 text-gray-600"><%= link_to "        Lathrop, CA 95330", "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", target: "_blank", class: "hover:text-blue-200" %></p>
+        <h3 class="text-xl font-semibold text-gray-900">Fire Friday</h3>
+        <p class="mt-2 text-gray-600">7:00 PM - Worship Night on Last Friday of the Month</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -62,13 +59,13 @@
     <div class="text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Upcoming Events</h2>
     </div>
-    <div class="mt-12 bg-blue-50 rounded-lg overflow-hidden shadow-lg">
+    <div class="mt-12 rounded-lg overflow-hidden shadow-lg" style="background-color: #f5ede8;">
       <div class="md:flex">
         <div class="md:flex-shrink-0">
           <img class="h-48 w-full object-cover md:w-48" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Event image">
         </div>
         <div class="p-8">
-          <div class="uppercase tracking-wide text-sm text-blue-600 font-semibold">Community Outreach</div>
+          <div class="uppercase tracking-wide text-sm font-semibold" style="color: #dc2626;">Community Outreach</div>
           <h3 class="mt-2 text-xl font-semibold text-gray-900">Summer Food Drive</h3>
           <p class="mt-3 text-gray-600">Join us in supporting our local community through our annual summer food drive. We'll be collecting non-perishable items to help those in need.</p>
           <div class="mt-4">
@@ -76,9 +73,9 @@
             <span class="mx-2 text-gray-400">|</span>
             <span class="text-gray-600">Time: 9:00 AM - 2:00 PM</span>
           </div>
-          <%= link_to "Learn More", events_path, class: "mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-700" %>
+          <%= link_to "Learn More", events_path, class: "mt-4 inline-block bg-red-600 text-white px-6 py-2 rounded-md font-medium hover:bg-red-700" %>
         </div>
       </div>
     </div>
   </div>
-</section> 
+</section>

@@ -1,26 +1,26 @@
-<nav class="bg-white shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16">
+<nav class="bg-white shadow-lg py-4">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+    <div class="flex justify-between h-20">
 
     <!-- Logo -->
     <div class="flex items-center">
       <%= link_to root_path do %>
-        <%= image_tag "jicc_logo.png", class: "h-6 w-auto mr-2", alt: "JICC Logo" %>
+        <%= image_tag "jicc_logo.png", class: "w-auto mr-2", style: "height: 90px;", alt: "JICC Logo" %>
       <% end %>
-      <%= link_to root_path, class: "ml-3 text-xl font-bold text-gray-700" do %>
+      <%= link_to root_path, class: "ml-3 text-2xl font-bold text-gray-700" do %>
         Joy International Church Center
       <% end %>
     </div>
 
       <!-- Desktop menu -->
       <div class="hidden md:flex items-center space-x-4">
-        <%= link_to "Home", root_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "About", about_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "Ministries", ministries_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "Events", events_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "Sermons", sermons_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "Contact", contact_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium" %>
-        <%= link_to "Give", giving_path, class: "bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700" %>
+        <%= link_to "Home", root_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "About", about_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "Ministries", ministries_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "Events", events_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "Sermons", sermons_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "Contact", contact_path, class: "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium" %>
+        <%= link_to "Give", giving_path, class: "text-white px-4 py-2 rounded-md text-lg font-medium hover:bg-orange-700", style: "background-color: red;" %> 
       </div>
 
       <!-- Mobile menu button -->

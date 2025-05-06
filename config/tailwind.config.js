@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./app/views/**/*.{erb,haml,html,slim}",
@@ -8,6 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        ...colors, // Enable all default Tailwind colors, including orange
         jicc: {
           // Primary colors
           red: "#D30001",
