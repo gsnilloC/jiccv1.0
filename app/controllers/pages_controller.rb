@@ -19,4 +19,4 @@ class PagesController < ApplicationController
 
   def giving
   end
-end 
+end
