@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @events = Event.all.order(date: :asc)
   end
 
   def about
