@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 1) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_24_024940) do
   create_schema "_heroku"
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_stat_statements"
+
+  create_table "events", force: :cascade do |t|
+    t.string "group"
+    t.string "name"
+    t.text "description"
+    t.string "time"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "solid_cache_entries", force: :cascade do |t|
     t.binary "key", null: false

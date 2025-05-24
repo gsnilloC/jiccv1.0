@@ -14,8 +14,9 @@ Rails.application.routes.draw do
 
   get "about", to: "pages#about"
   get "ministries", to: "pages#ministries"
-  get "events", to: "pages#events"
   get "sermons", to: "pages#sermons"
   get "contact", to: "pages#contact"
   get "giving", to: "pages#giving"
+
+  resources :events, only: [ :index, :new, :create, :destroy ]
 end

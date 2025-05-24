@@ -3,25 +3,21 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Quick Links -->
       <div>
-        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <h3 class="text-lg font-semibold mb-4">Explore</h3>
         <ul class="space-y-2">
-          <li><%= link_to "Home", root_path, class: "hover:text-blue-200" %></li>
-          <li><%= link_to "About", about_path, class: "hover:text-blue-200" %></li>
           <li><%= link_to "Ministries", ministries_path, class: "hover:text-blue-200" %></li>
           <li><%= link_to "Events", events_path, class: "hover:text-blue-200" %></li>
           <li><%= link_to "Sermons", sermons_path, class: "hover:text-blue-200" %></li>
-          <li><%= link_to "Contact", contact_path, class: "hover:text-blue-200" %></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <h3 class="text-lg font-semibold mb-4"><%= link_to "Contact Us", contact_path, class: "hover:text-blue-200" %></h3>
         <ul class="space-y-2">
           <li><%= link_to "17902 Murphy Pkwy", "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", target: "_blank", class: "hover:text-blue-200" %></li>
            <li><%= link_to "Lathrop, CA 95330", "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", target: "_blank", class: "hover:text-blue-200" %></li>
           <li>Phone: (209)-922-4919</li>
-          <li>Email: jicc.church@yahoo.com</li>
         </ul>
       </div>
 
@@ -51,11 +47,6 @@
       </div>
     </div>
 
-    <!-- Bottom Section -->
-    <div class="mt-8 pt-8 border-t border-jicc-orange-dark">
-      <p class="text-center text-sm">
-        © <%= Time.current.year %> Joy International Church Center. All rights reserved.
-      </p>
-    </div>
+   
   </div>
 </footer> 

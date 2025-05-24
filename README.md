@@ -65,7 +65,3 @@ bundle exec rubocop
 - `bin/dev` — Unified dev server (Rails, Tailwind, etc.)
 - `bin/rails test` — Run all tests
 - `bundle exec rubocop` — Lint Ruby code
-
----
-
-Happy coding!
