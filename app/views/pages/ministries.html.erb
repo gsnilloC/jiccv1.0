@@ -1,94 +1,77 @@
 <!-- Page Header -->
-<div class="text-white" style="background-color: #ec5415;">
-  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Our Ministries</h1>
-    <p class="mt-6 text-xl max-w-3xl">Discover the various ways you can get involved and serve in our church community.</p>
+<div class="text-white relative overflow-visible bg-gradient-to-l from-orange-600 to-orange-400" style="height: 500px;">
+  <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
+    <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
+      <img src="<%= asset_path('ministries.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 500px; position: absolute; top: -100px; left: 40%; transform: translateX(-50%);" />
+    </div>
+    <div class="mt-32 w-full lg:w-2/4 flex flex-col justify-center items-start z-10">
+      <h1 class="font-bold tracking-tight text-lg">MINISTRIES</h1>
+      <p class="mt-2 text-3xl max-w-3xl font-semibold">Find a ministry that fits you and step into your purpose. God has a place for your gifts.</p>
+    </div>
   </div>
 </div>
+
+<div style="height: 14rem;"></div>
 
 <!-- Ministries Grid -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    <!-- Youth Ministry -->
+    <!-- Kids Ministry -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Youth Ministry">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kids Ministry">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Youth Ministry</h3>
-        <p class="mt-2 text-gray-600">Engaging and empowering young people through fellowship, worship, and service.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Meets: Wednesdays at 7:00 PM</p>
-          <p class="text-sm text-gray-500">Contact: youth@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Kids Ministry</h3>
+        <p class="mt-2 text-gray-600">Safe, fun, and Bible-based learning for children ages 2–12.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
 
-    <!-- Worship Ministry -->
+    <!-- Youth Group -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Worship Ministry">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Youth Group">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Worship Ministry</h3>
-        <p class="mt-2 text-gray-600">Leading the congregation in meaningful worship through music and prayer.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Meets: Sundays at 8:00 AM</p>
-          <p class="text-sm text-gray-500">Contact: worship@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Youth Group</h3>
+        <p class="mt-2 text-gray-600">Periodic gatherings for middle and high school students.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
 
-    <!-- Outreach Ministry -->
+    <!-- Women Ministry -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Outreach Ministry">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Women Ministry">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Outreach Ministry</h3>
-        <p class="mt-2 text-gray-600">Serving our community through various programs and initiatives.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Meets: Saturdays at 9:00 AM</p>
-          <p class="text-sm text-gray-500">Contact: outreach@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Women Ministry</h3>
+        <p class="mt-2 text-gray-600">Monthly gathering every 3rd Saturday of the month.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
 
-    <!-- Children's Ministry -->
+    <!-- Men Ministry -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Children's Ministry">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Men Ministry">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Children's Ministry</h3>
-        <p class="mt-2 text-gray-600">Nurturing young hearts and minds in the love of Christ.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Meets: Sundays at 9:00 AM</p>
-          <p class="text-sm text-gray-500">Contact: children@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Men Ministry</h3>
+        <p class="mt-2 text-gray-600">Monthly gathering every 2nd Saturday of the month.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
 
-    <!-- Small Groups -->
+    <!-- Intercessory Ministry -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Small Groups">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Intercessory Ministry">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Small Groups</h3>
-        <p class="mt-2 text-gray-600">Building deeper relationships through fellowship and Bible study.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Various times and locations</p>
-          <p class="text-sm text-gray-500">Contact: groups@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Intercessory Ministry</h3>
+        <p class="mt-2 text-gray-600">Meets every Wednesday for prayer.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
 
-    <!-- Prayer Ministry -->
+    <!-- Praise and Worship Ministry -->
     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Prayer Ministry">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Praise and Worship Ministry">
       <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-900">Prayer Ministry</h3>
-        <p class="mt-2 text-gray-600">Supporting our church family through prayer and intercession.</p>
-        <div class="mt-4">
-          <p class="text-sm text-gray-500">Meets: Daily at 6:00 AM</p>
-          <p class="text-sm text-gray-500">Contact: prayer@church.com</p>
-        </div>
+        <h3 class="text-xl font-semibold text-gray-900">Praise and Worship Ministry</h3>
+        <p class="mt-2 text-gray-600">Meets periodically.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
