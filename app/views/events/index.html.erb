@@ -2,16 +2,16 @@
 <div class="text-white relative overflow-visible bg-gradient-to-l from-orange-600 to-orange-400" style="height: 500px;">
   <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
     <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
-      <img src="<%= asset_path('boy.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 600px; position: absolute; top: -50px; left: 40%; transform: translateX(-50%);" />
+      <img src="<%= asset_path('events.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 750px; position: absolute; top: -50px; left: 40%; transform: translateX(-50%);" />
     </div>
-    <div class="mt-48 w-full lg:w-1/2 flex flex-col justify-center items-start z-10">
+    <div class="mt-48 w-full lg:w-1/2 flex flex-col justify-center items-start z-1 ml-24">
       <h1 class="font-bold tracking-tight text-lg">UPCOMING EVENTS</h1>
       <p class="mt-2 text-3xl max-w-3xl font-semibold">Join us for these special gatherings and community events.</p>
     </div>
   </div>
 </div>
 
-<div class="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
   <div class="mb-8 flex justify-end">
     <%= link_to 'Add New Event', new_event_path, class: 'bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded shadow' %>
   </div>
