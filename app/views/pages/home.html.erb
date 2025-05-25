@@ -1,8 +1,8 @@
-<div style="position: absolute; top: 0; left: 0; width: 100vw; height: 650px; z-index: 0; overflow: hidden; pointer-events: none;">
+<div style="position: absolute; top: 0; left: 0; width: 100vw; height: 600px; z-index: 0; overflow: hidden; pointer-events: none;">
   <%= image_tag "cross.jpg", style: "width: 100vw; height: 800x; object-fit: cover; opacity: .4;" %>
 </div>
 
-<div style="height: 8rem;"></div>
+<div style="height: 12rem;"></div>
 
 <!-- Hero Section -->
 <section class="relative z-10">
@@ -14,13 +14,11 @@
   </div>
 </section>
 
-<div style="height: 3rem;"></div>
-
 <!-- Service Times -->
 <section class="py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <span class="inline-block mb-4 text-2xl font-semibold tracking-widest text-blue-500 bg-blue-100 rounded uppercase" style="letter-spacing: 0.15em;">Service Times</span>
+      <span class="inline-block mb-4 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Service Times</span>
     </div>
     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Sunday Service -->
@@ -49,36 +47,39 @@
 <section class="py-16 ">
     <div class="mx-auto px-6 sm:px-8 lg:px-12" style="max-width: 75rem;">
     <div class="text-center">
-      <span class="inline-block mb-4 px-4 py-1 text-2xl font-semibold tracking-widest text-blue-500 bg-blue-100 rounded uppercase" style="letter-spacing: 0.15em;">Testimony</span>
-      <blockquote class="text-2xl sm:text-4xl md:text-5xl font-bold text-cyan-900 leading-snug mb-6">
+      <span class="inline-block mb-4 px-4 py-1 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Testimony</span>
+      <blockquote class="text-xl sm:text-2xl md:text-4xl font-bold text-cyan-900 leading-snug mb-6">
         "From the moment I walked in, I felt a sense of belonging. The messages are inspiring, and the community truly feels like family. My faith has grown so much since joining, and I am grateful for the support and love I receive every week."
       </blockquote>
       <div class="mb-4">
-        <span class="text-blue-500 font-semibold text-xl">Adam</span>
+        <span class="text-black-500 font-semibold text-xl">- Adam</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Upcoming Events -->
-<section class="py-24 ">
+<section class="py-16 ">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <span class="inline-block mb-4 px-4 text-2xl font-semibold tracking-widest text-blue-500 bg-blue-100 rounded uppercase" style="letter-spacing: 0.15em;">Upcoming Events</span>
+      <span class="inline-block mb-4 px-4 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Upcoming Events</span>
     </div>
-    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-12 flex flex-col gap-8">
       <% if @events.present? %>
-        <% @events.each do |event| %>
-          <div class="bg-gray-50 rounded-lg p-6 text-center shadow">
+        <% sorted_events = @events.sort_by { |event| event.date || Date.today } %>
+        <% sorted_events.first(2).each do |event| %>
+          <div class="bg-gray-50 rounded-lg p-6 shadow w-full max-w-4xl mx-auto mb-8">
             <h3 class="text-xl font-semibold text-gray-900"><%= event.name %></h3>
             <div class="mt-2 text-gray-600">
               <span class="block font-medium">Date: <%= event.date %></span>
               <span class="block font-medium">Time: <%= event.time %></span>
             </div>
             <p class="mt-3 text-gray-600"><%= event.description %></p>
-            <%# Optionally, add a link to the event's show page if it exists %>
           </div>
         <% end %>
+        <div class="flex justify-center w-full max-w-4xl mx-auto">
+          <%= link_to 'See More Events', events_path, class: 'inline-block bg-orange-500 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-600 transition' %>
+        </div>
       <% else %>
         <div class="col-span-full text-center text-gray-500 text-lg">No upcoming events at this time.</div>
       <% end %>
