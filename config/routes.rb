@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get "giving", to: "pages#giving"
 
   resources :events, only: [ :index, :new, :create, :destroy ]
+
+  post "contact", to: "pages#contact_submit", as: :contact_submit
 end
