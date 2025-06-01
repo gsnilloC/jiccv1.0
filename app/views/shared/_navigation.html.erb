@@ -1,25 +1,30 @@
 <nav id="main-navbar" data-controller="navbar" class="bg-transparent py-4" style="position: fixed; top: 0; left: 0; right: 0; width: 100vw; z-index: 50;">
-  <div class="px-8">
+  <div class="pr-12">
     <div class="flex justify-between h-20">
 
     <!-- Logo -->
     <div class="flex items-center">
       <%= link_to root_path do %>
-        <%= image_tag "jicc_logo.png", class: "w-auto mr-0 mt-12", style: "height: 130px;", alt: "JICC Logo" %>
+        <%= image_tag "jicc_logo.png", class: "w-auto mt-9", style: "height: 150px;", alt: "JICC Logo" %>
       <% end %>
-      <%= link_to root_path, class: "text-2xl font-bold", style: "color: #3E2C23;" do %>
-        JOY INTERNATIONAL CHURCH CENTER
+      <div class="flex flex-col leading-tight mt-6">
+      <%= link_to root_path, class: "text-white text-xl font-bold" do %>
+        JOY INTERNATIONAL
       <% end %>
+       <%= link_to root_path, class: "text-white text-2xl font-bold -mt-1" do %>
+        CHURCH CENTER
+      <% end %>
+      </div>
     </div>
 
       <!-- Desktop menu -->
-      <div class="hidden md:flex items-center space-x-4 -mr-4">
-        <%= link_to "About", about_path, class: "uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white", style: "color: #3E2C23;" %>
-        <%= link_to "Ministries", ministries_path, class: "uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white", style: "color: #3E2C23;" %>
-        <%= link_to "Events", events_path, class: "uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white", style: "color: #3E2C23;" %>
-        <%= link_to "Sermons", sermons_path, class: "uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white", style: "color: #3E2C23;" %>
-        <%= link_to "Contact", contact_path, class: "uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white", style: "color: #3E2C23;" %>
-        <%= link_to "Give", giving_path, class: "uppercase font-bold px-4 py-2 rounded-md text-lg hover:bg-orange-700 hover:text-white bg-red-500"%> 
+      <div class="hidden md:flex items-center space-x-6 mt-6">
+        <%= link_to "About", about_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
+        <%= link_to "Ministries", ministries_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
+        <%= link_to "Events", events_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
+        <%= link_to "Sermons", sermons_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
+        <%= link_to "Contact", contact_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
+        <%= link_to "Give", giving_path, class: "text-white uppercase font-bold px-4 py-2 rounded-md text-lg hover:bg-orange-700 hover:text-white bg-red-500"%> 
       </div>
 
       <!-- Mobile menu button -->

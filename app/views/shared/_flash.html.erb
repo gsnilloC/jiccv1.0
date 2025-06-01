@@ -1,0 +1,27 @@
+<% if flash.any? %>
+  <div id="flash-pop" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50">
+    <% flash.each do |type, message| %>
+      <div class="bg-green-500 text-white px-6 py-3 rounded shadow-lg mb-2 animate-fade-in-out">
+        <%= message %>
+      </div>
+    <% end %>
+  </div>
+  <script>
+    setTimeout(function() {
+      var flash = document.getElementById('flash-pop');
+      if (flash) { flash.style.display = 'none'; }
+    }, 3500);
+  </script>
+<% end %>
+
+<style>
+@keyframes fade-in-out {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.animate-fade-in-out {
+  animation: fade-in-out 3.5s;
+}
+</style> 
