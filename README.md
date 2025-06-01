@@ -33,7 +33,12 @@ bin/setup
 
 ### 3. Environment Variables
 
-- Copy `.env.example` to `.env` and fill in your secrets (e.g., `DATABASE_URL`).
+- Create a .env file with the following variables:
+  ```
+  DATABASE_URL=
+  GMAIL_USERNAME=
+  GMAIL_APP_PASSWORD=
+  ```
 - If using Heroku Postgres, get your `DATABASE_URL` with:
   ```bash
   heroku config:get DATABASE_URL -a your-heroku-app-name
@@ -42,8 +47,6 @@ bin/setup
 ### 4. Running the Server
 
 ```bash
-bin/dev
-# or
 bin/rails server
 ```
 
