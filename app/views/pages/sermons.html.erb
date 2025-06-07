@@ -1,12 +1,12 @@
 <!-- Page Header -->
-<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e]" style="height: 500px;">
-  <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
-    <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
-      <img src="<%= asset_path('boy.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 650px; position: absolute; top: -30px; left: 40%; transform: translateX(-50%);" />
+<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e] min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center">
+  <div class="flex flex-col-reverse lg:flex-row items-center max-w-7xl mx-auto w-full h-full px-4 sm:px-6 lg:px-8 gap-8 lg:gap-0">
+    <div class="w-full lg:w-1/2 flex justify-center relative z-10 mt-8 lg:mt-0">
+      <img src="<%= asset_path('boy.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain max-w-[90vw] sm:max-w-[400px] lg:max-w-[650px] relative lg:absolute lg:top-[-30px] lg:left-1/2 lg:transform lg:-translate-x-1/2" />
     </div>
-    <div class="mt-48 w-full lg:w-1/2 flex flex-col justify-center items-start z-10">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start z-10 mt-8 lg:mt-0">
       <h1 class="font-bold tracking-tight text-lg">SERMONS</h1>
-      <p class="mt-2 text-3xl max-w-3xl font-semibold">Watch and listen to our latest sermons and teachings.</p>
+      <p class="mt-2 text-2xl sm:text-3xl max-w-3xl font-semibold">Watch and listen to our latest sermons and teachings.</p>
       <div class="mt-8 flex justify-center space-x-4">
         <a href="https://www.youtube.com/@tharamburuproductionsusa6211/featured" class="inline-block bg-red-600 text-white px-8 py-3 rounded-md font-medium hover:bg-red-700">
           Watch on YouTube

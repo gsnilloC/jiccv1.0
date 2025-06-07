@@ -1,23 +1,22 @@
 <!-- Page Header -->
-<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e]" style="height: 500px;">
-  <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
-    <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
-      <img src="<%= asset_path('sermon.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 620px; position: absolute; top: -50px; left: 40%; transform: translateX(-50%);" />
+<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e] min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center">
+  <div class="flex flex-col-reverse lg:flex-row items-center max-w-7xl mx-auto w-full h-full px-4 sm:px-6 lg:px-8 gap-8 lg:gap-0">
+    <div class="w-full lg:w-1/2 flex justify-center relative z-10 mt-8 lg:mt-0">
+      <img src="<%= asset_path('sermon.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain max-w-[90vw] sm:max-w-[400px] lg:max-w-[620px] relative lg:absolute lg:top-[-50px] lg:left-1/2 lg:transform lg:-translate-x-1/2" />
     </div>
-    <div class="mt-48 w-full lg:w-1/2 flex flex-col justify-center items-start z-10">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start z-10 mt-8 lg:mt-0">
       <h1 class="font-bold tracking-tight text-lg">REACH OUT TO US</h1>
-      <p class="mt-2 text-3xl max-w-3xl font-semibold">We'd love to hear from you. Get in touch with us using the form below.</p>
-      <div class="mt-8 flex justify-center space-x-4">
-    </div>
+      <p class="mt-2 text-2xl sm:text-3xl max-w-3xl font-semibold">We'd love to hear from you. Get in touch with us using the form below.</p>
+      <div class="mt-8 flex justify-center space-x-4"></div>
     </div>
   </div>
 </div>
 
 <!-- Contact Section -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 mt-8 sm:mt-24">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <!-- Contact Form -->
-    <div class="bg-white rounded-lg shadow-lg p-8">
+    <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
       <div id="contact-loading" class="hidden flex items-center justify-center mb-4">
         <svg class="animate-spin h-6 w-6 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -54,19 +53,18 @@
       <!-- Map -->
       <div class="bg-white rounded-lg shadow-lg overflow-hidden">
         <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.515556707153!2d-121.3115411!3d37.8173424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090173b6b5f4b69%3A0x3d994f6f09e80f8a!2s17902%20Murphy%20Pkwy%2C%20Lathrop%2C%20CA%2095330!5e0!3m2!1sen!2sus!4v1714599250000!5m2!1sen!2sus"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.515556707153!2d-121.3115411!3d37.8173424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090173b6b5f4b69%3A0x3d994f6f09e80f8a!2s17902%20Murphy%20Pkwy%2C%20Lathrop%2C%20CA%2095330!5e0!3m2!1sen!2sus!4v1714599250000!5m2!1sen!2sus"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
 
       <!-- Contact Details -->
-      <div class="bg-white rounded-lg shadow-lg p-8">
+      <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
         <div class="space-y-4">
           <div class="flex items-start">
@@ -78,12 +76,11 @@
             </div>
             <div class="ml-3 text-gray-600">
               <p class="mt-2 text-gray-600">
-  <%= link_to "17902 Murphy Pkwy, Lathrop, CA 95330", 
-    "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", 
-    target: "_blank", 
-    class: "hover:text-blue-200" %>
-</p>
-
+                <%= link_to "17902 Murphy Pkwy, Lathrop, CA 95330", 
+                  "https://maps.google.com/?q=17902+Murphy+Pkwy+Lathrop+CA+95330", 
+                  target: "_blank", 
+                  class: "hover:text-blue-200" %>
+              </p>
             </div>
           </div>
 

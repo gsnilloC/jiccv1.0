@@ -1,75 +1,70 @@
 <!-- Page Header -->
-<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e]" style="height: 500px;">
-  <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
-    <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
-      <img src="<%= asset_path('ministries.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain" style="max-width: 500px; position: absolute; top: -100px; left: 40%; transform: translateX(-50%);" />
+<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e] min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center">
+  <div class="flex flex-col-reverse lg:flex-row items-center max-w-7xl mx-auto w-full h-full px-4 sm:px-6 lg:px-8 gap-8 lg:gap-0">
+    <div class="w-full lg:w-1/2 flex justify-center relative z-10 mt-8 lg:mt-0">
+      <img src="<%= asset_path('ministries.jpg') %>" alt="Boy" class="h-auto shadow-lg object-contain max-w-[90vw] sm:max-w-[400px] lg:max-w-[500px] relative lg:absolute lg:top-[-100px] lg:left-1/2 lg:transform lg:-translate-x-1/2" />
     </div>
-    <div class="mt-32 w-full lg:w-2/4 flex flex-col justify-center items-start z-10">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start z-10 mt-8 lg:mt-0">
       <h1 class="font-bold tracking-tight text-lg">MINISTRIES</h1>
-      <p class="mt-2 text-3xl max-w-3xl font-semibold">Find a ministry that fits you and step into your purpose. God has a place for your gifts.</p>
+      <p class="mt-2 text-2xl sm:text-3xl max-w-3xl font-semibold">Find a ministry that fits you and step into your purpose. God has a place for your gifts.</p>
     </div>
   </div>
 </div>
 
-<div style="height: 14rem;"></div>
+<div class="h-16 sm:h-24"></div>
 
 <!-- Ministries Grid -->
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
   <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
     <!-- Kids Ministry -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kids Ministry">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kids Ministry">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Kids Ministry</h3>
         <p class="mt-2 text-gray-600">Safe, fun, and Bible-based learning for children ages 2–12.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
-
     <!-- Youth Group -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Youth Group">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Youth Group">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Youth Group</h3>
         <p class="mt-2 text-gray-600">Periodic gatherings for middle and high school students.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
-
     <!-- Women Ministry -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Women Ministry">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Women Ministry">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Women Ministry</h3>
         <p class="mt-2 text-gray-600">Monthly gathering every 3rd Saturday of the month.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
-
     <!-- Men Ministry -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Men Ministry">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Men Ministry">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Men Ministry</h3>
         <p class="mt-2 text-gray-600">Monthly gathering every 2nd Saturday of the month.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
-
     <!-- Intercessory Ministry -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Intercessory Ministry">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Intercessory Ministry">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Intercessory Ministry</h3>
         <p class="mt-2 text-gray-600">Meets every Wednesday for prayer.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
       </div>
     </div>
-
     <!-- Praise and Worship Ministry -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Praise and Worship Ministry">
-      <div class="p-6">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+      <img class="w-full h-40 sm:h-48 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Praise and Worship Ministry">
+      <div class="p-6 flex-1 flex flex-col">
         <h3 class="text-xl font-semibold text-gray-900">Praise and Worship Ministry</h3>
         <p class="mt-2 text-gray-600">Meets periodically.</p>
         <%= link_to "Learn More", "#", class: "mt-4 inline-block text-blue-600 hover:text-blue-800" %>
@@ -79,12 +74,12 @@
 </div>
 
 <!-- Get Involved CTA -->
-<section class="bg-gray-50 py-16">
+<section class="bg-gray-50 py-12 sm:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Get Involved</h2>
-    <p class="mt-4 text-xl text-gray-600">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">Get Involved</h2>
+    <p class="mt-4 text-lg sm:text-xl text-gray-600">
       Interested in joining one of our ministries? We'd love to have you!
     </p>
- <%= link_to "Contact Us", contact_path, style: "margin-top: 2rem; display: inline-block; background-color: #ec5415; color: white; padding: 0.75rem 2rem; border-radius: 0.375rem; font-weight: 500; text-decoration: none;" %> 
+    <%= link_to "Contact Us", contact_path, class: "mt-8 inline-block bg-orange-600 text-white px-8 py-3 rounded-md font-medium hover:bg-orange-700 transition" %> 
   </div>
 </section> 

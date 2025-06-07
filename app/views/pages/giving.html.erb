@@ -1,27 +1,27 @@
 <!-- Page Header -->
-<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e]" style="height: 500px;">
-  <div class="flex flex-row items-center max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8">
-    <div class="w-full lg:w-1/2 flex justify-center relative" style="z-index:2;">
-      <img src="<%= asset_path('community.jpg') %>" alt="Giving" class="h-auto shadow-lg object-contain" style="max-width: 630px; position: absolute; top: -70px; left: 40%; transform: translateX(-50%);" />
+<div class="text-white relative overflow-visible bg-gradient-to-l from-[#ec6b3c] to-[#ef542e] min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center">
+  <div class="flex flex-col-reverse lg:flex-row items-center max-w-7xl mx-auto w-full h-full px-4 sm:px-6 lg:px-8 gap-8 lg:gap-0">
+    <div class="w-full lg:w-1/2 flex justify-center relative z-10 mt-8 lg:mt-0">
+      <img src="<%= asset_path('community.jpg') %>" alt="Giving" class="h-auto shadow-lg object-contain max-w-[90vw] sm:max-w-[400px] lg:max-w-[630px] relative lg:absolute lg:top-[-70px] lg:left-1/2 lg:transform lg:-translate-x-1/2" />
     </div>
-    <div class="mt-48 w-full lg:w-1/2 flex flex-col justify-center items-start z-10">
+    <div class="w-full lg:w-1/2 flex flex-col justify-center items-start z-10 mt-8 lg:mt-0">
       <h1 class="font-bold tracking-tight text-lg">GIVING</h1>
-      <p class="mt-2 text-3xl max-w-3xl font-semibold">Support our ministry and make a difference in our community.</p>
+      <p class="mt-2 text-2xl sm:text-3xl max-w-3xl font-semibold">Support our ministry and make a difference in our community.</p>
     </div>
   </div>
 </div>
 
 <!-- Giving Options -->
-<div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <!-- Donation Form -->
-    <div class="bg-white rounded-lg shadow-lg p-8">
+    <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Make a Donation</h2>
       <form id="payment-form">
         <div class="space-y-6">
           <div>
             <label for="amount" class="block text-sm font-medium text-gray-700">Donation Amount</label>
-            <div class="mt-1 grid grid-cols-4 gap-4">
+            <div class="mt-1 grid grid-cols-2 sm:grid-cols-4 gap-4">
               <button type="button" class="amount-btn bg-red-500 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-700">$25</button>
               <button type="button" class="amount-btn bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">$50</button>
               <button type="button" class="amount-btn bg-gray-100 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">$100</button>
@@ -71,7 +71,7 @@
     <!-- Impact Information -->
     <div class="space-y-8">
       <!-- How Your Donation Helps -->
-      <div class="bg-white rounded-lg shadow-lg p-8">
+      <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">How Your Donation Helps</h2>
         <div class="space-y-6">
           <div class="flex items-start">
@@ -113,7 +113,7 @@
       </div>
 
       <!-- Other Ways to Give -->
-      <div class="bg-white rounded-lg shadow-lg p-8">
+      <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-6">Other Ways to Give</h2>
         <div class="space-y-4">
           <div class="flex items-center">
@@ -141,10 +141,10 @@
 </div>
 
 <!-- Tax Information -->
-<section class="bg-gray-50 py-16">
+<section class="bg-gray-50 py-12 sm:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Tax Information</h2>
-    <p class="mt-4 text-xl text-gray-600">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">Tax Information</h2>
+    <p class="mt-4 text-lg sm:text-xl text-gray-600">
       All donations are tax-deductible. You will receive a receipt for your records.
     </p>
     <p class="mt-2 text-gray-600">
@@ -162,11 +162,9 @@
         btn.classList.remove('bg-blue-600', 'text-white');
         btn.classList.add('bg-gray-100', 'text-gray-700');
       });
-      
       // Add active class to clicked button
       this.classList.remove('bg-gray-100', 'text-gray-700');
       this.classList.add('bg-blue-600', 'text-white');
-      
       // Update custom amount input
       document.getElementById('custom-amount').value = this.textContent.replace('$', '');
     });

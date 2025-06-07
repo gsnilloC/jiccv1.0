@@ -1,75 +1,72 @@
-<div style="position: absolute; top: 0; left: 0; width: 100vw; height: 600px; z-index: 0; overflow: hidden; pointer-events: none;">
-  <%= image_tag "cross.jpg", style: "width: 100vw; height: 800x; object-fit: cover; opacity: .4;" %>
+<div class="absolute top-0 left-0 w-full h-[300px] sm:h-[400px] lg:h-[600px] z-0 overflow-hidden pointer-events-none">
+  <%= image_tag "cross.jpg", class: "w-full h-full object-cover opacity-40" %>
 </div>
 
-<div style="height: 12rem;"></div>
+<div class="h-24 sm:h-32"></div>
 
 <!-- Hero Section -->
 <section class="relative z-10">
-  <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-orange-500"style="color: orange;">Discover and Maximize your potential through the word of God.</h1>
-    <div class="mt-10">
+  <div class="relative max-w-7xl mx-auto py-12 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-orange-500">Discover and Maximize your potential through the word of God.</h1>
+    <div class="mt-8 sm:mt-10">
       <%= link_to "Learn More About Us", "about", class: "inline-block bg-red-600 text-white px-8 py-3 rounded-md font-medium hover:bg-red-700" %>
     </div>
   </div>
 </section>
 
 <!-- Service Times -->
-<section class="py-16">
+<section class="py-12 sm:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <span class="inline-block mb-4 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Service Times</span>
+      <span class="inline-block mb-4 text-xl sm:text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Service Times</span>
     </div>
-    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-8 sm:mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Sunday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
-        <h3 class="text-2xl font-semibold text-gray-900">Sunday Morning</h3>
-        <p class="text-lg mt-2 text-gray-600">10:30 AM - Sunday Service</p>
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Sunday Morning</h3>
+        <p class="text-base sm:text-lg mt-2 text-gray-600">10:30 AM - Sunday Service</p>
       </div>
-
       <!-- Wednesday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
-        <h3 class="text-2xl font-semibold text-gray-900">Wednesday Evening</h3>
-        <p class="text-lg mt-2 text-gray-600">6:00 PM - Prayer Night</p>
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Wednesday Evening</h3>
+        <p class="text-base sm:text-lg mt-2 text-gray-600">6:00 PM - Prayer Night</p>
       </div>
-
       <!-- Friday Service -->
       <div class="bg-gray-50 rounded-lg p-6 text-center">
-        <h3 class="text-2xl font-semibold text-gray-900">Fire Friday</h3>
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Fire Friday</h3>
         <p class="mt-2 text-gray-600">7:00 PM - Worship Night on Last Friday of the Month</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- Testimonies Section -->
-<section class="py-16 ">
-    <div class="mx-auto px-6 sm:px-8 lg:px-12" style="max-width: 75rem;">
+<section class="py-12 sm:py-16">
+  <div class="mx-auto px-4 sm:px-8 lg:px-12 max-w-5xl">
     <div class="text-center">
-      <span class="inline-block mb-4 px-4 py-1 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Testimony</span>
-      <blockquote class="text-xl sm:text-2xl md:text-4xl font-bold text-cyan-900 leading-snug mb-6">
+      <span class="inline-block mb-4 px-4 py-1 text-xl sm:text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Testimony</span>
+      <blockquote class="text-lg sm:text-2xl md:text-4xl font-bold text-cyan-900 leading-snug mb-6">
         "From the moment I walked in, I felt a sense of belonging. The messages are inspiring, and the community truly feels like family. My faith has grown so much since joining, and I am grateful for the support and love I receive every week."
       </blockquote>
       <div class="mb-4">
-        <span class="text-black-500 font-semibold text-xl">- Adam</span>
+        <span class="text-black-500 font-semibold text-lg sm:text-xl">- Adam</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Upcoming Events -->
-<section class="py-16 ">
+<section class="py-12 sm:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <span class="inline-block mb-4 px-4 text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Upcoming Events</span>
+      <span class="inline-block mb-4 px-4 text-xl sm:text-2xl font-semibold tracking-widest text-black rounded uppercase" style="letter-spacing: 0.15em;">Upcoming Events</span>
     </div>
-    <div class="mt-12 flex flex-col gap-8">
+    <div class="mt-8 sm:mt-12 flex flex-col gap-8">
       <% if @events.present? %>
         <% sorted_events = @events.sort_by { |event| event.date || Date.today } %>
         <% sorted_events.first(2).each do |event| %>
           <div class="bg-gray-50 rounded-lg p-6 shadow w-full max-w-4xl mx-auto mb-8">
-            <h3 class="text-xl font-semibold text-gray-900"><%= event.name %></h3>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900"><%= event.name %></h3>
             <div class="mt-2 text-gray-600">
               <span class="block font-medium">Date: <%= event.date %></span>
               <span class="block font-medium">Time: <%= event.time %></span>
@@ -85,6 +82,5 @@
       <% end %>
     </div>
   </div>
-
-  <div style="height: 5rem;"></div>
+  <div class="h-20"></div>
 </section>

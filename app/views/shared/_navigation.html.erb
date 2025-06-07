@@ -1,22 +1,20 @@
 <nav id="main-navbar" data-controller="navbar" class="bg-transparent py-4" style="position: fixed; top: 0; left: 0; right: 0; width: 100vw; z-index: 50;">
-  <div class="pr-12">
-    <div class="flex justify-between h-20">
-
-    <!-- Logo -->
-    <div class="flex items-center">
-      <%= link_to root_path do %>
-        <%= image_tag "jicc_logo.png", class: "w-auto mt-9", style: "height: 150px;", alt: "JICC Logo" %>
-      <% end %>
-      <div class="flex flex-col leading-tight mt-6">
-      <%= link_to root_path, class: "text-white text-xl font-bold" do %>
-        JOY INTERNATIONAL
-      <% end %>
-       <%= link_to root_path, class: "text-white text-2xl font-bold -mt-1" do %>
-        CHURCH CENTER
-      <% end %>
+  <div class="">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo (left on mobile and desktop) -->
+      <div class="flex items-center">
+        <%= link_to root_path do %>
+          <%= image_tag "jicc_logo.png", class: "w-auto mt-9", style: "height: 150px;", alt: "JICC Logo" %>
+        <% end %>
+        <div class="hidden md:flex flex-col leading-tight mt-6">
+          <%= link_to root_path, class: "text-white text-2xl lg:text-3xl font-bold" do %>
+            JOY INTERNATIONAL
+          <% end %>
+          <%= link_to root_path, class: "text-white text-3xl lg:text-4xl font-bold -mt-1" do %>
+            CHURCH CENTER
+          <% end %>
+        </div>
       </div>
-    </div>
-
       <!-- Desktop menu -->
       <div class="hidden md:flex items-center space-x-6 mt-6">
         <%= link_to "About", about_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
@@ -26,16 +24,42 @@
         <%= link_to "Contact", contact_path, class: "text-white uppercase font-bold px-3 py-2 rounded-md text-lg hover:text-white" %>
         <%= link_to "Give", giving_path, class: "text-white uppercase font-bold px-4 py-2 rounded-md text-lg hover:bg-orange-700 hover:text-white bg-red-500"%> 
       </div>
-
-      <!-- Mobile menu button -->
-      <div class="-mr-2 flex items-center md:hidden">
-        <button type="button" class="bg-white rounded-md p-2 text-gray-800 hover:text-gray-900">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+      <!-- Mobile menu button (right on mobile, hidden on desktop) -->
+      <div class="flex items-center md:hidden pr-12">
+        <button type="button" data-action="click->navbar#toggleMenu" class="bg-transparent rounded-md p-2 text-white hover:text-gray-200" aria-label="Toggle main menu">
+          <span class="sr-only">Toggle main menu</span>
+          <!-- Hamburger icon -->
+          <svg data-navbar-target="hamburgerIcon" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- X icon -->
+          <svg data-navbar-target="closeIcon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
+  </div>
+  <!-- Sliding mobile menu -->
+  <div data-navbar-target="mobileMenu" class="fixed inset-0 z-50 md:hidden bg-transparent" style="display: none;">
+    <!-- Menu panel -->
+    <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col transform translate-x-full transition-transform duration-300" data-navbar-target="menuPanel">
+      <button type="button" data-action="click->navbar#closeMenu" class="absolute top-4 right-4 text-gray-700 hover:text-gray-900">
+        <span class="sr-only">Close menu</span>
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <nav class="mt-12 space-y-6">
+        <%= link_to "About", about_path, class: "block text-gray-900 uppercase font-bold px-3 py-2 rounded-md text-lg hover:bg-orange-100" %>
+        <%= link_to "Ministries", ministries_path, class: "block text-gray-900 uppercase font-bold px-3 py-2 rounded-md text-lg hover:bg-orange-100" %>
+        <%= link_to "Events", events_path, class: "block text-gray-900 uppercase font-bold px-3 py-2 rounded-md text-lg hover:bg-orange-100" %>
+        <%= link_to "Sermons", sermons_path, class: "block text-gray-900 uppercase font-bold px-3 py-2 rounded-md text-lg hover:bg-orange-100" %>
+        <%= link_to "Contact", contact_path, class: "block text-gray-900 uppercase font-bold px-3 py-2 rounded-md text-lg hover:bg-orange-100" %>
+        <%= link_to "Give", giving_path, class: "block text-white uppercase font-bold px-4 py-2 rounded-md text-lg bg-red-500 hover:bg-orange-700"%> 
+      </nav>
+    </div>
+    <!-- Overlay to close menu -->
+    <div data-action="click->navbar#closeMenu" class="absolute inset-0" tabindex="-1"></div>
   </div>
 </nav> 
