@@ -42,8 +42,10 @@
   </div>
   <!-- Sliding mobile menu -->
   <div data-navbar-target="mobileMenu" class="fixed inset-0 z-50 md:hidden bg-transparent" style="display: none;">
+    <!-- Overlay to close menu -->
+    <div data-action="click->navbar#closeMenu" class="absolute inset-0" tabindex="-1"></div>
     <!-- Menu panel -->
-    <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col transform translate-x-full transition-transform duration-300" data-navbar-target="menuPanel">
+    <div class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col transform translate-x-full transition-transform duration-300" data-navbar-target="menuPanel" data-action="click->navbar#stopPropagation">
       <button type="button" data-action="click->navbar#closeMenu" class="absolute top-4 right-4 text-gray-700 hover:text-gray-900">
         <span class="sr-only">Close menu</span>
         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +61,5 @@
         <%= link_to "Give", giving_path, class: "block text-white uppercase font-bold px-4 py-2 rounded-md text-lg bg-red-500 hover:bg-orange-700"%> 
       </nav>
     </div>
-    <!-- Overlay to close menu -->
-    <div data-action="click->navbar#closeMenu" class="absolute inset-0" tabindex="-1"></div>
   </div>
 </nav> 
